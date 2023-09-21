@@ -1,0 +1,16 @@
+{
+  "name": "fylo-data-storage-component",
+  "version": "1.0.0",
+  "description": "![Design preview for the Fylo data storage component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sindu Andita Pratama",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.68.0",
+    "vite": "^4.4.9"
+  }
+}
