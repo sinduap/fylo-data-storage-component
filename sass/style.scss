@@ -19,12 +19,12 @@ html {
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 1.4rem;
+  background: var(--neutral-dark-2) no-repeat top 50vh right 100%
+    url('../images/bg-desktop.png');
 }
 
 .container {
-  height: 100vh;
-  background: var(--neutral-dark-2) no-repeat top 50vh right 100%
-    url('../images/bg-desktop.png');
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,7 +154,7 @@ body {
   }
 }
 
-.triagle {
+.triangle {
   clip-path: polygon(100% 0, 0 0, 100% 100%);
   position: absolute;
   top: 2rem;
@@ -162,4 +162,39 @@ body {
   background-color: #fff;
   height: 2rem;
   width: 2rem;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+// Media Queries
+
+@media (max-width: 800px) {
+  body {
+    background: no-repeat top right 100% url('../images/bg-mobile.png');
+    background-size: cover;
+  }
+
+  .data-storage {
+    flex-direction: column;
+    width: 90%;
+    // margin-bottom: 3rem;
+
+    &__box {
+      &--head,
+      &--body {
+        width: 100%;
+      }
+    }
+
+    &__notification {
+      top: 9.5rem;
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
+  }
+
+  .triangle {
+    display: none;
+  }
 }
